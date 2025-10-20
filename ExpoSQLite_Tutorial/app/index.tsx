@@ -40,6 +40,12 @@ export default function App() {
    */
   const [items, setItems] = useState<Item[]>([]);
 
+  const sortOptions = [
+    { label: 'Name (A-Z)', value: 'nameAsc' },
+    { label: 'Name (Z-A)', value: 'nameDesc' },
+    { label: 'Quantity (Low-High)', value: 'quantityAsc' },
+    { label: 'Quantity (High-Low)', value: 'quantityDesc' },
+  ];
   /**
    * Load Items on Mount
    *
@@ -212,6 +218,10 @@ export default function App() {
       },
     ]);
   };
+
+  
+
+  
 
   return (
     <View style={styles.container}>
